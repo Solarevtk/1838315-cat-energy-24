@@ -13,11 +13,11 @@
     </a>
     <nav class="main-nav">
       <button class="main-nav__togle" type="button">
-        <span class="visually-hidden">открыть меню</span>
+      <span class="visually-hidden">открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a>
               главная
             </a>
@@ -27,7 +27,7 @@
               каталог продукции
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a href="form.html">
               подбор программы
             </a>
@@ -37,110 +37,107 @@
     </nav>
   </header>
   <main>
+    <h1>Подбор программы</h1>
     <form action="https://echo.htmlacademy.ru/" method="get">
-      <fieldset class="form-group">
-        <section class="main-form">
-          <h1>Подбор программы</h1>
-          <p class="main-form-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-          <ul class="main-form-list">
-            <li class="main-form-item">
+      <fieldset class="main-form">
+          <p class="main-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <ul class="main-form__list">
+            <li class="main-form__item">
               <label for="name-form">ИМЯ:*</label>
               <input type="text" placeholder="Барсик" id="name-form" required>
             </li>
-            <li class="main-form-item">
+            <li class="main-form__item">
               <label for="mass-form">Вес (кг):*</label>
               <input type="text" placeholder="7" id="mass-form" required>
             </li>
-            <li class="main-form-item">
+            <li class="main-form__item">
               <label for="age-form">Возраст (лет):</label>
               <input type="text" placeholder="7" id="age-form">
             </li>
           </ul>
-        </section>
-        <section class="radio-inputs">
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter">
+      </fieldset>
+        <fieldset class="form-filter__section">
+          <ul class="form-filter__list">
+            <li class="form-filter__item">
               <label class="control">
-                <input class="visually-hidden control-input" name="form" value="mass-out" type="radio" checked>
-                <span class="control-mark"></span>
-                <span class="control-label">Похудение</span>
+                <input class="visually-hidden control__input" name="form" value="mass-out" type="radio" checked>
+                <span class="control__mark"></span>
+                <span class="control__label">Похудение</span>
               </label>
             </li>
-            <li class="catalog-filter">
+            <li class="form-filter__item">
               <label class="control">
-                <input class="visually-hidden control-input" name="form" value="mass-in" type="radio">
-                <span class="control-mark"></span>
-                <span class="control-label">Набор массы</span>
+                <input class="visually-hidden control__input" name="form" value="mass-in" type="radio">
+                <span class="control__mark"></span>
+                <span class="control__label">Набор массы</span>
               </label>
             </li>
-            <li class="catalog-filter">
+            <li class="form-filter__item">
               <label class="control">
-                <input class="visually-hidden control-input" name="form" value="dont-know" type="radio">
-                <span class="control-mark"></span>
-                <span class="control-label">Не знаю (Нужен ваш совет)</span>
+                <input class="visually-hidden control__input" name="form" value="dont-know" type="radio">
+                <span class="control__mark"></span>
+                <span class="control__label">Не знаю (Нужен ваш совет)</span>
               </label>
             </li>
           </ul>
-        </section>
-        <section class="contact-details">
+        </fieldset>
+        <fieldset class="contact-details__section">
           <h2>Контактные данные (владельца кота)</h2>
-          <ul class="contact-details-list">
-            <li class="contact-details-item">
+          <ul class="contact-details__list">
+            <li class="contact-details__item">
               <label for="e-mail">E-mail:*</label>
               <input type="email" placeholder="kuklachev@gmail.com" id="e-mail" required>
             </li>
-            <li clas="contact-details-item">
+            <li clas="contact-details__item">
               <label for="tel">Телефон:*</label>
               <input type="tel" placeholder="8 (960) 900-60-90" id="tel" required>
             </li>
           </ul>
-        </section>
-        <section class="message">
+        </fieldset>
+        <fieldset class="message__section">
           <h2>Комментарий</h2>
-          <div class="message-form">
-            <p>Расскажите обо всех повадках кота</p>
+          <div class="message__block">
+            <p class="message__text">Расскажите обо всех повадках кота</p>
             <textarea></textarea>
-
           </div>
-        </section>
-        <section class="extra">
-          <div class="extra-block">
+        </fieldset>
+        <fieldset class="extra__section">
+          <div class="extra__block">
             <h2>Дополнительно</h2>
-            <ul class="extra-list">
-              <li class="extra-block-item">
+            <ul class="extra__list">
+              <li class="extra-block__item">
                 <label class="control">
                   <input class="visually-hidden" type="checkbox">
-                  <span class="control-mark"></span>
-                  <span class="item-info">сахарозаменитель</span>
+                  <span class="control__mark"></span>
+                  <span class="item__info">сахарозаменитель</span>
                 </label>
               </li>
-              <li class="extra-block-item">
+              <li class="extra-block__item">
                 <label class="control">
                   <input class="visually-hidden" type="checkbox">
-                  <span class="control-mark"></span>
-                  <span class="item-info">питьевая вода</span>
+                  <span class="control__mark"></span>
+                  <span class="item__info">питьевая вода</span>
                 </label>
               </li>
-              <li class="extra-block-item">
+              <li class="extra-block__item">
                 <label class="control">
                   <input class="visually-hidden" type="checkbox">
-                  <span class="control-mark"></span>
-                  <span class="item-info">молоко</span>
+                  <span class="control__mark"></span>
+                  <span class="item__info">молоко</span>
                 </label>
               </li>
-              <li class="extra-block-item">
+              <li class="extra-block__item">
                 <label class="control">
                   <input class="visually-hidden" type="checkbox">
-                  <span class="control-mark"></span>
-                  <span class="item-info">витамины</span>
+                  <span class="control__mark"></span>
+                  <span class="item__info">витамины</span>
                 </label>
               </li>
             </ul>
           </div>
-        </section>
-        <div class="button__get-form">
-          <button class="submit-form" type="submit">Отправить Заявку</button>
-          <p>* — Обязательные поля</p>
+          <div class="button-get__block">
+          <button class="button-get__submit" type="submit">Отправить Заявку</button>
+          <p class="button-get__text">* — Обязательные поля</p>
         </div>
       </fieldset>
     </form>
@@ -150,10 +147,10 @@
     <div class="page-footer__block">
       <img src="img/location.png" src="местонахождение магазина" width="320" height="362">
     </div>
-    <div class="page__footer-logo">
+    <div class="page-footer__logo">
       <img src="img/footer-logo.svg" src="логотип магазина" width="128" height="24">
     </div>
-    <div class="social">
+    <div class="social__block">
       <ul class="social__list">
         <li class="social__item">
           <a href="#">
@@ -184,7 +181,7 @@
         </li>
       </ul>
     </div>
-    <div class="copyright">
+    <div class="copyright__block">
       <p>HTML Academy</p>
       <a href="https://htmlacademy.ru/intensive/adaptive">
         <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
