@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Татьяна Соларева](https://up.htmlacademy.ru/adaptive/24/user/1838315).
-* Наставник: `Неизвестно`.
+* Наставник:[Руслан Бреев](https://htmlacademy.ru/profile/blckwltz).
 
 ---
 
