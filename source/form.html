@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="body body--form">
   <header class="page-header">
     <a class="page-header__logo">
       <img src="img/logo-desktop.png" alt="Кэт Энерджи" width="202" height="59">
@@ -18,17 +19,17 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a>
+            <a class="site-list__link" href="index.html">
               главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">
+            <a class="site-list__link" href="catalog.html">
               каталог продукции
             </a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a href="form.html">
+            <a class="site-list__link" href="#">
               подбор программы
             </a>
           </li>
@@ -37,107 +38,108 @@
     </nav>
   </header>
   <main>
-    <h1>Подбор программы</h1>
     <form action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="main-form">
-          <p class="main-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <h1 class="header main-form__header">Подбор программы</h1>
+          <p class="main-form__text">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
           <ul class="main-form__list">
             <li class="main-form__item">
-              <label for="name-form">ИМЯ:*</label>
-              <input type="text" placeholder="Барсик" id="name-form" required>
+              <label class="min-form__label--name main-form__label" for="name-form">ИМЯ:*</label>
+              <input class="main-form__input" type="text" placeholder="Барсик" id="name-form" required>
             </li>
             <li class="main-form__item">
-              <label for="mass-form">Вес (кг):*</label>
-              <input type="text" placeholder="7" id="mass-form" required>
+              <label class="min-form__label--form main-form__label" for="mass-form">Вес (кг):*</label>
+              <input class="main-form__input" type="text" placeholder="7" id="mass-form" required>
             </li>
             <li class="main-form__item">
-              <label for="age-form">Возраст (лет):</label>
-              <input type="text" placeholder="7" id="age-form">
+              <label class="min-form__label--age main-form__label" for="age-form">Возраст (лет):</label>
+              <input class="main-form__input" type="text" placeholder="7" id="age-form">
             </li>
           </ul>
       </fieldset>
-        <fieldset class="form-filter__section">
+        <fieldset class="form-filter">
+          <h2 class="visually-hidden">Филтры</h2>
           <ul class="form-filter__list">
             <li class="form-filter__item">
               <label class="control">
-                <input class="visually-hidden control__input" name="form" value="mass-out" type="radio" checked>
-                <span class="control__mark"></span>
-                <span class="control__label">Похудение</span>
+                <input class="visually-hidden form-filter__input" name="form" value="mass-out" type="radio" checked>
+                <span class="form-filter__mark"></span>
+                <span class="form-filter__label">Похудение</span>
               </label>
             </li>
             <li class="form-filter__item">
               <label class="control">
-                <input class="visually-hidden control__input" name="form" value="mass-in" type="radio">
-                <span class="control__mark"></span>
-                <span class="control__label">Набор массы</span>
+                <input class="visually-hidden form-filter__input" name="form" value="mass-in" type="radio">
+                <span class="form-filter__mark"></span>
+                <span class="form-filter__label">Набор массы</span>
               </label>
             </li>
             <li class="form-filter__item">
               <label class="control">
-                <input class="visually-hidden control__input" name="form" value="dont-know" type="radio">
-                <span class="control__mark"></span>
-                <span class="control__label">Не знаю (Нужен ваш совет)</span>
+                <input class="visually-hidden form-filter__input" name="form" value="dont-know" type="radio">
+                <span class="form-filter__mark"></span>
+                <span class="form-filter__label">Не знаю (Нужен ваш совет)</span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="contact-details__section">
-          <h2>Контактные данные (владельца кота)</h2>
+        <fieldset class="contact-details">
+          <h2 class="header contact-details__header">Контактные данные <br> (владельца кота)</h2>
           <ul class="contact-details__list">
             <li class="contact-details__item">
-              <label for="e-mail">E-mail:*</label>
-              <input type="email" placeholder="kuklachev@gmail.com" id="e-mail" required>
+              <label class="contact-details__label main-form__label" for="e-mail">E-mail:*</label>
+              <input class="contact-details__input main-form__input" type="email" placeholder="kuklachev@gmail.com" id="e-mail" required>
             </li>
-            <li clas="contact-details__item">
-              <label for="tel">Телефон:*</label>
-              <input type="tel" placeholder="8 (960) 900-60-90" id="tel" required>
+            <li class="contact-details__item">
+              <label class="contact-details__label main-form__label" for="tel">Телефон:*</label>
+              <input class="contact-details__input main-form__input" type="tel" placeholder="8 (960) 900-60-90" id="tel" required>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="message__section">
-          <h2>Комментарий</h2>
+        <fieldset class="message">
           <div class="message__block">
+          <h2 class="header message__header">Комментарий</h2>
             <p class="message__text">Расскажите обо всех повадках кота</p>
-            <textarea></textarea>
+            <textarea class="message__textarea"></textarea>
           </div>
         </fieldset>
-        <fieldset class="extra__section">
+        <fieldset class="extra">
           <div class="extra__block">
-            <h2>Дополнительно</h2>
+            <h2 class="header extra__header">Дополнительно</h2>
             <ul class="extra__list">
-              <li class="extra-block__item">
+              <li class="extra__item">
                 <label class="control">
                   <input class="visually-hidden" type="checkbox">
                   <span class="control__mark"></span>
-                  <span class="item__info">сахарозаменитель</span>
+                  <span class="extra__text" class="item__info">сахарозаменитель</span>
                 </label>
               </li>
-              <li class="extra-block__item">
+              <li class="extra__item">
                 <label class="control">
                   <input class="visually-hidden" type="checkbox">
                   <span class="control__mark"></span>
-                  <span class="item__info">питьевая вода</span>
+                  <span class="extra__text" class="item__info">питьевая вода</span>
                 </label>
               </li>
-              <li class="extra-block__item">
+              <li class="extra__item">
                 <label class="control">
                   <input class="visually-hidden" type="checkbox">
                   <span class="control__mark"></span>
-                  <span class="item__info">молоко</span>
+                  <span class="extra__text" class="item__info">молоко</span>
                 </label>
               </li>
-              <li class="extra-block__item">
+              <li class="extra__item">
                 <label class="control">
                   <input class="visually-hidden" type="checkbox">
                   <span class="control__mark"></span>
-                  <span class="item__info">витамины</span>
+                  <span class="extra__text" class="item__info">витамины</span>
                 </label>
               </li>
             </ul>
           </div>
-          <div class="button-get__block">
-          <button class="button-get__submit" type="submit">Отправить Заявку</button>
-          <p class="button-get__text">* — Обязательные поля</p>
+          <div class="extra-get">
+          <button class="extra-button__get" type="submit">Отправить Заявку</button>
+          <p class="extra-text__get">* — Обязательные поля</p>
         </div>
       </fieldset>
     </form>
@@ -145,8 +147,13 @@
 
   <footer class="page-footer">
     <div class="page-footer__block">
+      <section class="adres">
+        <div class="adres__block">
+          <p class="adres__text--dillers">приглашаем <br> к сотрудничеству <br> дилеров!</p>
+          <p class="adres__text">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
+        </div>
+      </section>
       <img src="img/location.png" src="местонахождение магазина" width="320" height="362">
-    </div>
     <div class="page-footer__logo">
       <img src="img/footer-logo.svg" src="логотип магазина" width="128" height="24">
     </div>
@@ -191,6 +198,7 @@
         </svg>
       </a>
     </div>
+  </div>
   </footer>
 </body>
 
