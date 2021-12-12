@@ -1,5 +1,11 @@
-.stats {
+.stats__block {
+  position: relative;
   background-color: #f2f2f2;
+  margin-bottom: 20px;
+
+  .stats-text__block {
+    display: flex;
+  }
 }
 
 .stats__img {
@@ -37,11 +43,44 @@
   }
 }
 
-.stats__block {
-  margin-bottom: 20px;
+@media (min-width: @tablet-width) {
+  .stats__img {
+    position: absolute;
+    left: 426px;
+    top: 0;
+    width: 200px;
+    height: 200px;
+  }
 
-  .stats-text__block {
-    display: flex;
+  .stats__img[src="img/getting-mass.png"] {
+    width: 268px;
+  }
+
+  .stats__block {
+    width: 708px;
+    height: 372px;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .stats {
+    display: flex;
+  }
+
+  .stats__block {
+    width: 570px;
+    height: 374px;
+    margin-right: 80px;
+  }
+
+  .stats__img {
+    width: 100px;
+    height: 106px;
+    position: static;
+  }
+
+  .stats__img[src="img/getting-mass.png"] {
+    width: 134px;
+    height: 100px;
+  }
+}

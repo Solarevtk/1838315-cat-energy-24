@@ -1,15 +1,15 @@
 .choose-program {
+  z-index: 1;
+  margin: 0;
   margin-bottom: 20px;
   width: 320px;
   height: 480px;
   background: url("../img/index-background-food.png") no-repeat;
-  text-align: center;
 }
 
 .choose-program__header {
   color: #ffffff;
   width: 249px;
-  margin: 0;
   padding: 27px 36px 25px 35px;
 }
 
@@ -22,6 +22,7 @@
   color: #ffffff;
   padding: 0 60px 29px 62px;
   margin: 0;
+  width: 198px;
 }
 
 .choose-program__button {
@@ -33,4 +34,53 @@
   color: #ffffff;
   padding: 7px 66px 7px 66px;
   background-color: #68b738;
+}
+
+@media (min-width: @tablet-width) {
+  .choose-program__header {
+    margin: 0;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    width: 414px;
+    padding-bottom: 41px;
+  }
+
+  .choose-program {
+    width: 709px;
+    height: 810px;
+    background: none;
+  }
+
+  .choose-program__text {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    width: 283px;
+  }
+
+  .choose-program__img {
+    width: 709px;
+    height: 609px;
+    position: absolute;
+    left: 29px;
+    // top: 341px;
+    top: 200px;
+    z-index: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .choose-program {
+    width: 1220px;
+    height: 700px;
+  }
+
+  .choose-program__img {
+    position: absolute;
+    width: 552px;
+    height: 499px;
+    left: 558px;
+    top: 141px;
+  }
 }

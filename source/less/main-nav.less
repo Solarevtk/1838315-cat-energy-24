@@ -1,4 +1,3 @@
-
 .main-nav__list {
   list-style-type: none;
   padding: 0;
@@ -6,9 +5,6 @@
 }
 
 .site-list__item {
-  padding: 22px 102px 24px 102px;
-  width: 280px;
-  height: 66px;
   margin: 0;
 
   .site-list__link {
@@ -23,3 +19,48 @@
   }
 }
 
+.site-list {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: block;
+  }
+
+  .main-nav__wrapper {
+    width: 440px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__togle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: block;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__wrapper {
+    width: 478px;
+  }
+
+  .main-nav__togle {
+    display: none;
+  }
+
+  .main-nav {
+    margin-left: auto;
+  }
+}
