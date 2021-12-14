@@ -16,7 +16,7 @@
   color: #444444;
 }
 
-.adres__text-dillers {
+.adres-dillers__text {
   margin: 0;
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -28,3 +28,27 @@
   padding-right: 16px;
 }
 
+@media (min-width: @tablet-width) {
+  .adres {
+    width: 768px;
+  }
+
+  .adres__text {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .adres {
+    position: absolute;
+    width: 565px;
+    background: #ffffff;
+    left: 110px;
+    top: 95px;
+    z-index: 2;
+  }
+
+  .adres__block {
+    position: relative;
+  }
+}
