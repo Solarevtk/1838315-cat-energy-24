@@ -14,3 +14,25 @@
   text-align: center;
   align-items: center;
 }
+
+@media (min-width: @tablet-width) {
+  .gift {
+    display: flex;
+    width: 707px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gift {
+    flex-direction: column;
+    width: 245px;
+    height: 289px;
+    margin-top: auto;
+    margin-left: 79px;
+  }
+
+  .gift__svg {
+    display: block;
+    text-align: center;
+  }
+}
