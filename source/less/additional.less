@@ -17,8 +17,18 @@
   }
 }
 
+.additional__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .additional__item {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 282px;
+  height: 98px;
 
   .additional__item-info {
     font-size: 16px;
@@ -44,4 +54,22 @@
   background: #68b738;
   margin: 0;
   padding: 12px 60px 12px 60px;
+}
+
+@media (min-width: @desktop-width) {
+  .additional__item {
+    flex-direction: row;
+    width: 895px;
+    height: 72px;
+  }
+
+  .additional__table {
+    display: flex;
+  }
+
+  .additional__button {
+    padding: 0 92px;
+    height: 40px;
+    margin-left: auto;
+  }
 }
