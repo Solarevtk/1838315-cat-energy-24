@@ -1,0 +1,37 @@
+.range__block {
+  display: flex;
+  height: 30px;
+  width: 210px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 35px;
+  padding-bottom: 20px;
+}
+
+.range__text {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  /* or 125% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .range {
+    text-align: -webkit-center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range__block {
+    margin-bottom: 80px;
+  }
+}

@@ -8,6 +8,22 @@
   background: url("../img/location.png") no-repeat;
 }
 
+.page__footer-logo {
+  width: 280px;
+  text-align: center;
+  padding-top: 39px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.page__footer-logo:hover svg {
+  opacity: 0.8;
+}
+
+.page__footer-logo:active svg {
+  opacity: 0.6;
+}
+
 .page-footer {
   position: relative;
 }
@@ -17,11 +33,24 @@
     width: 768px;
     height: 400px;
   }
+
+  .page__footer-logo {
+    width: 128px;
+    height: 24px;
+    border: none;
+    padding: 0;
+    padding-left: 30px;
+    padding-top: 63px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer__location {
     width: 1440px;
     height: 400px;
+  }
+
+  .page__footer-logo {
+    padding-left: 110px;
   }
 }

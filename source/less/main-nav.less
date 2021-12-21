@@ -4,28 +4,83 @@
   margin: 0;
 }
 
-.site-list__item {
-  margin: 0;
+.main-nav__wrapper {
+  width: 320px;
+  height: 198px;
+  position: absolute;
+  background: #ffffff;
+}
 
-  .site-list__link {
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: #000000;
-    text-decoration: none;
+.main-nav--opened .main-nav__toggle {
+  top: 30px;
+  right: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
 
-.site-list {
-  display: none;
+.main-nav__toggle {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 16px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 2px;
+  z-index: 3;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(#000000, 30%);
+  box-shadow:
+    0 8px 0 0 fade(#000000, 30%),
+    0 16px 0 0 fade(#000000, 30%);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav__wrapper {
-    width: 440px;
+    width: 57%;
+    display: block;
+    background: none;
+    padding: 0;
   }
 
   .main-nav__list {
@@ -33,7 +88,7 @@
     justify-content: space-between;
   }
 
-  .main-nav__togle {
+  .main-nav__toggle {
     display: none;
   }
 }
@@ -45,7 +100,8 @@
   }
 
   .main-nav__wrapper {
-    width: 478px;
+    width: 33%;
+    margin-right: 110px;
   }
 
   .main-nav__togle {
@@ -53,6 +109,6 @@
   }
 
   .main-nav {
-    margin-left: auto;
+    margin-left: 478px;
   }
 }

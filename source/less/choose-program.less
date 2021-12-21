@@ -11,6 +11,12 @@
   color: #ffffff;
   width: 249px;
   padding: 27px 36px 25px 35px;
+  margin: 0;
+  text-align: center;
+}
+
+.choose-program__img {
+  margin-left: 20px;
 }
 
 .choose-program__text {
@@ -34,6 +40,16 @@
   color: #ffffff;
   padding: 7px 66px 7px 66px;
   background-color: #68b738;
+  margin-left: 20px;
+}
+
+.choose-program__button:hover {
+  background: #5eaa2f;
+}
+
+.choose-program__button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background: #5eaa2f;
 }
 
 @media (min-width: @tablet-width) {
@@ -44,11 +60,15 @@
     color: #000000;
     width: 414px;
     padding-bottom: 41px;
+    padding-left: 117px;
+    padding-top: 62px;
+    text-align: unset;
   }
 
   .choose-program {
     width: 709px;
-    height: 810px;
+    height: 870px;
+    // height: 20%;
     background: none;
   }
 
@@ -57,23 +77,42 @@
     line-height: 20px;
     color: #000000;
     width: 283px;
+    padding-left: 119px;
+    margin-bottom: 110px;
   }
 
   .choose-program__img {
+    position: absolute;
     width: 709px;
     height: 609px;
-    position: absolute;
     left: 29px;
-    // top: 341px;
-    top: 200px;
+    top: 341px;
     z-index: -1;
+  }
+
+  .choose-program__button {
+    padding: 14px 26px;
+    margin-left: 120px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .choose-program {
-    width: 1220px;
+    width: 1440px;
     height: 700px;
+  }
+
+  .choose-program::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: auto;
+    width: 720px;
+    height: 694px;
+    background: url("../img/index-background-food.png") no-repeat;
+    background-size: 720px 694px;
+    z-index: -2;
   }
 
   .choose-program__img {
@@ -82,5 +121,21 @@
     height: 499px;
     left: 558px;
     top: 141px;
+    z-index: 0;
+  }
+
+  .choose-program__header {
+    padding-left: 190px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: inherit;
+  }
+
+  .choose-program__text {
+    padding-left: 190px;
+  }
+
+  .choose-program__button {
+    margin-left: 190px;
   }
 }
