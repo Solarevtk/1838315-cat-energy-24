@@ -1,0 +1,38 @@
+.money__block {
+  background-color: #eaeaea;
+}
+
+.money__img-cat {
+  display: block;
+  width: 280px;
+  height: 232px;
+}
+
+@media (min-width: @tablet-width) {
+  .example:not(.money) {
+    background-color: #ffffff;
+  }
+
+  .money {
+    width: 768px;
+    background: #eaeaea;
+    text-align: -webkit-center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .money__img-cat {
+    width: 592px;
+    height: 511px;
+    position: absolute;
+    bottom: 270px;
+    left: 100px;
+  }
+
+  .money {
+    position: relative;
+    align-self: end;
+    margin-left: auto;
+    padding-bottom: 100px;
+  }
+}
