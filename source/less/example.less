@@ -25,6 +25,7 @@
 }
 
 .example__block-text {
+  width: 87px;
   margin: 0;
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -33,6 +34,11 @@
   line-height: 100%;
   color: #444444;
   text-align: center;
+  position: relative;
+  background: #eaeaea;
+  z-index: 3;
+  left: 19px;
+  bottom: 5px;
 }
 
 .example__header {
@@ -108,6 +114,10 @@
     padding-bottom: 54px;
   }
 
+  .example__block-text {
+    background: #ffffff;
+  }
+
   .example {
     padding-left: 0;
   }
@@ -163,6 +173,9 @@
     padding-bottom: 76px;
   }
 
+  .example__block-text {
+    background: #eaeaea;
+  }
 
   .example__text {
     width: 436px;
