@@ -2,6 +2,8 @@
   width: 280px;
   height: 290px;
   background: url("../img/gift-background.png") no-repeat;
+  padding-top: 58px;
+  margin-left: 21px;
 }
 
 .gift__text {
@@ -13,26 +15,69 @@
   color: #ffffff;
   text-align: center;
   align-items: center;
+  margin: 0;
+}
+
+.gift__svg {
+  min-width: 78px;
+  max-height: 80px;
+  display: block;
+  text-align: center;
+  padding-bottom: 48px;
 }
 
 @media (min-width: @tablet-width) {
   .gift {
-    display: flex;
     width: 707px;
+    min-height: 200px;
+    background-size: cover;
+    margin: 0 30px 71px 30px;
+    padding: 0;
+  }
+
+  .gift__block {
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 77px;
+    padding-top: 71px;
+  }
+
+  .gift__text {
+    text-align: start;
+  }
+
+  .gift__svg {
+    padding: 0;
+    margin-right: 265px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .gift {
-    flex-direction: column;
     width: 245px;
     height: 289px;
-    margin-top: auto;
+    margin-top: 79px;
     margin-left: 79px;
+  }
+
+  .gift__block {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 55px;
+  }
+
+  .gift__text {
+    width: 161px;
+    text-align: center;
   }
 
   .gift__svg {
     display: block;
     text-align: center;
+    margin: 0;
+    margin-bottom: 46px;
   }
 }
