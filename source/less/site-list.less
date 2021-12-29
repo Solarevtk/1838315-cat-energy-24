@@ -37,6 +37,12 @@
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
+    margin-top: 42px;
+  }
+
+  .site-list__item {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .site-list__link {
@@ -46,6 +52,7 @@
   }
 
   .site-list__item--active {
+    padding-bottom: 10px;
     border-bottom: 2px solid #68b738;
   }
 
@@ -80,5 +87,15 @@
     .site-list__item--active {
       border-bottom: 2px solid #ffffff;
     }
+  }
+
+  .site-list__item:not(:last-child) {
+    margin-right: 37px;
+  }
+
+  .site-list {
+    margin-top: 69px;
+    min-width: 484px;
+    min-height: 40px;
   }
 }

@@ -97,6 +97,11 @@
   margin: 0;
 }
 
+@media (max-width: @mobile-width-only) {
+  .example__header {
+    padding-top: 25px;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .example__text {
@@ -120,6 +125,10 @@
     width: 162px;
     height: 77px;
     margin-right: 42px;
+  }
+
+  .example:not(.money) {
+    background-color: #ffffff;
   }
 
   .example__header {
@@ -159,12 +168,13 @@
   .example__block {
     background-color: #eaeaea;
     width: 1440px;
-    height: 470px;
+    height: 462px;
   }
 
   .example__header {
     background-color: #ffffff;
     padding-bottom: 76px;
+    padding-left: 110px;
   }
 
   .example__block-text {
@@ -173,8 +183,7 @@
 
   .example__text {
     width: 436px;
-    padding-bottom: 69px;
-    padding-top: 70px;
+    padding: 70px 0 69px 110px;
   }
 
   .example__information-header {
@@ -193,5 +202,6 @@
 
   .example__information-list {
     flex-direction: column;
+    padding-left: 110px;
   }
 }

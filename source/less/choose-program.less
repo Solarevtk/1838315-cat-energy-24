@@ -69,7 +69,7 @@
     width: 709px;
     height: 870px;
     // height: 20%;
-    background: none;
+    background-image: none;
   }
 
   .choose-program__text {
@@ -98,21 +98,13 @@
 
 @media (min-width: @desktop-width) {
   .choose-program {
-    width: 1440px;
-    height: 700px;
-  }
-
-  .choose-program::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: auto;
-    width: 720px;
-    height: 694px;
-    background: url("../img/index-background-food.png") no-repeat;
-    background-size: 720px 694px;
+    background-image: url("../img/index-background-food.png"), linear-gradient(to right, #5eaa2f 70%, #ffffff 20%);
+    background-repeat: no-repeat;
+    background-size: 720px 694px, auto 694px;
+    background-position: top right, right top;
     z-index: -2;
+    min-width: 1440px;
+    width: auto;
   }
 
   .choose-program__img {
@@ -122,6 +114,7 @@
     left: 558px;
     top: 141px;
     z-index: 0;
+    margin: 0;
   }
 
   .choose-program__header {
@@ -129,6 +122,7 @@
     font-size: 60px;
     line-height: 60px;
     text-align: inherit;
+    padding-top: 223px;
   }
 
   .choose-program__text {
@@ -137,5 +131,11 @@
 
   .choose-program__button {
     margin-left: 190px;
+  }
+
+  .choose-program__block {
+    position: relative;
+    width: 1440px;
+    height: 700px;
   }
 }
