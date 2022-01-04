@@ -165,16 +165,32 @@
 }
 
 @media (min-width: @desktop-width) {
-  .example__block {
+  .example:not(.example__header) {
     background-color: #eaeaea;
+    position: relative;
+  }
+
+  .example__block {
     width: 1440px;
     height: 462px;
   }
 
   .example__header {
-    background-color: #ffffff;
     padding-bottom: 76px;
     padding-left: 110px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .example::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 136px;
+    background: #ffffff;
+    z-index: 0;
   }
 
   .example__block-text {
