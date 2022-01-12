@@ -21,7 +21,7 @@
 .page-header__block {
   display: flex;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 18px;
 }
 
 @media (min-width: @tablet-width) {
@@ -33,13 +33,23 @@
     background: url("../img/logo-tablet.png") no-repeat;
     width: 60px;
     height: 50px;
+    margin: 0;
     margin-right: 12px;
-    margin-left: 30px;
   }
 
   .page-header__logo-svg {
     width: 101px;
     height: 18px;
+  }
+
+  .page-header__block {
+    max-width: 174px;
+    padding-top: 24px;
+    padding-left: 30px;
+  }
+
+  .page-header__logo-text {
+    margin: 0;
   }
 
   .page-header__block:hover {
@@ -60,6 +70,28 @@
   .page-header__logo {
     width: 70px;
     height: 60px;
-    margin-left: 110px;
+    margin-left: 0;
+  }
+
+  .page-header__block {
+    min-width: 202px;
+    min-height: 59px;
+    padding: 0;
+  }
+
+  .page-header {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 54px;
+    padding: 0 110px;
+    justify-content: space-between;
+  }
+
+  .body-index {
+    .page-header {
+      position: absolute;
+      z-index: 2;
+    }
   }
 }

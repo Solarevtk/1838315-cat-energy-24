@@ -1,7 +1,8 @@
 .main-form {
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px 12px 20px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .main-form__header {
@@ -18,6 +19,7 @@
 
 .main-form__item {
   padding-bottom: 13px;
+  display: flex;
 }
 
 .main-form__item:nth-child(3) {
@@ -25,18 +27,39 @@
 }
 
 .main-form__input {
+  font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
-  padding: 13px 181px 16px 14px;
+  padding: 13px 185px 16px 14px;
   border: 1px solid #e7e7e7;
-  box-sizing: border-box;
+  max-width: 7px;
+}
+
+.main-form__input-name {
+  min-width: 65px;
+  padding-left: 14px;
+  padding-right: 148px;
+}
+
+.main-form__input-age {
+  padding-right: 150px;
+}
+
+.main-form__input:hover {
+  border: 1px solid #cdcdcd;
+}
+
+.main-form__input:focus {
+  outline: none;
+  border: 2px solid #444444;
 }
 
 .main-form__label {
+  font-family: "Oswald", sans-serif,;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -44,6 +67,16 @@
   text-transform: uppercase;
   color: #444444;
   padding-right: 12px;
+  min-width: 60px;
+  align-self: center;
+}
+
+.min-form__label-name {
+  min-width: 39px;
+}
+
+.min-form__label-age {
+  min-width: 95px;
 }
 
 .main-form__text {
@@ -54,4 +87,53 @@
   line-height: 18px;
   text-transform: uppercase;
   padding-bottom: 39px;
+  width: 226px;
+  color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .main-form {
+    padding-left: 71px;
+    padding-bottom: 72px;
+    min-width: 630px;
+    border: none;
+  }
+
+  .main-form__header {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 64px;
+    padding-bottom: 54px;
+  }
+
+
+  .main-form__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .main-form__input {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 475px 12px 20px;
+  }
+
+  .main-form__text {
+    font-size: 20px;
+    line-height: 30px;
+    width: 323px;
+    padding-bottom: 66px;
+  }
+
+  .main-form__item {
+    padding-bottom: 20px;
+  }
+
+  .main-form__input-name {
+    padding: 10px 487px 12px 19px;
+  }
+
+  .main-form__input-mass {
+    padding: 11px 518px 11px 19px;
+  }
 }

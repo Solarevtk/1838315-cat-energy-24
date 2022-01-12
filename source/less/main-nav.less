@@ -11,6 +11,12 @@
   background: #ffffff;
 }
 
+.body-catalog {
+  .main-nav__wrapper {
+    z-index: 1;
+  }
+}
+
 .main-nav--opened .main-nav__toggle {
   top: 30px;
   right: 20px;
@@ -81,6 +87,9 @@
     display: block;
     background: none;
     padding: 0;
+    max-width: 440px;
+    max-height: 36px;
+    margin-left: 94px;
   }
 
   .main-nav__list {
@@ -100,15 +109,13 @@
   }
 
   .main-nav__wrapper {
-    width: 33%;
-    margin-right: 110px;
-  }
-
-  .main-nav__togle {
-    display: none;
+    width: 100%;
+    position: static;
+    margin: 0;
+    max-width: unset;
   }
 
   .main-nav {
-    margin-left: 478px;
+    width: 45%;
   }
 }

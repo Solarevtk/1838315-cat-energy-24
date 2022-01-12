@@ -13,15 +13,9 @@
   border: 1px solid #cdcdcd;
   box-sizing: border-box;
   border-radius: 3px;
-}
-
-.fife-kg {
-  padding: 14px 42px 18px;
-}
-
-.sixty-days {
   padding: 14px 21px 18px;
-  width: 118px;
+  min-width: 118px;
+  text-align: center;
 }
 
 .example__block-text {
@@ -88,7 +82,7 @@
   width: 280px;
 }
 
-.example-list__information {
+.example__information-section {
   margin: 0;
   padding-bottom: 20px;
   margin-right: 32px;
@@ -103,6 +97,11 @@
   margin: 0;
 }
 
+@media (max-width: @mobile-width-only) {
+  .example__header {
+    padding-top: 25px;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .example__text {
@@ -122,10 +121,14 @@
     padding-left: 0;
   }
 
-  .example-list__information {
+  .example__information-section {
     width: 162px;
     height: 77px;
     margin-right: 42px;
+  }
+
+  .example:not(.money) {
+    background-color: #ffffff;
   }
 
   .example__header {
@@ -162,15 +165,32 @@
 }
 
 @media (min-width: @desktop-width) {
-  .example__block {
+  .example:not(.example__header) {
     background-color: #eaeaea;
+    position: relative;
+  }
+
+  .example__block {
     width: 1440px;
-    height: 470px;
+    height: 462px;
   }
 
   .example__header {
-    background-color: #ffffff;
     padding-bottom: 76px;
+    padding-left: 110px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .example::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 136px;
+    background: #ffffff;
+    z-index: 0;
   }
 
   .example__block-text {
@@ -179,8 +199,7 @@
 
   .example__text {
     width: 436px;
-    padding-bottom: 69px;
-    padding-top: 70px;
+    padding: 70px 0 69px 110px;
   }
 
   .example__information-header {
@@ -199,5 +218,6 @@
 
   .example__information-list {
     flex-direction: column;
+    padding-left: 110px;
   }
 }
