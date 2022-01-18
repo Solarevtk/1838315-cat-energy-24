@@ -18,8 +18,8 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  top: 30px;
-  right: 20px;
+  top: -33px;
+  right: 28px;
 
   &::before,
   &::after {
@@ -44,7 +44,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 24px;
+  top: -43px;
   right: 20px;
   z-index: 2;
   display: block;
@@ -75,9 +75,18 @@
     0 16px 0 0 fade(#000000, 30%);
 }
 
-@media (max-width: @mobile-width-only) {
+@media (max-width: @mobile-width-max) {
   .main-nav--closed .main-nav__wrapper {
     display: none;
+  }
+
+  .main-nav {
+    position: relative;
+  }
+
+  .main-nav__wrapper {
+    border-left: solid 1px #e6e6e6;
+    border-right: solid 1px #e6e6e6;
   }
 }
 
@@ -113,6 +122,7 @@
     position: static;
     margin: 0;
     max-width: unset;
+    margin-top: 12px;
   }
 
   .main-nav {
