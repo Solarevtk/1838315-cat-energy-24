@@ -34,12 +34,20 @@
 
 @media (min-width: @tablet-width) {
   .gift {
+    background: url("../img/catalog/gift-background_tablet.png") no-repeat;
     width: 707px;
     min-height: 200px;
-    background-size: cover;
     margin: 0 30px 71px 30px;
     padding: 0;
     background-size: 707px 200px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/catalog/gift-2-background_tablet.png") no-repeat;
+      background-size: 707px 200px;
+      min-height: 200px;
+      margin: 0 30px 71px 30px;
+      padding: 0;
+    }
   }
 
   .gift__block {
@@ -67,6 +75,12 @@
     margin-top: 79px;
     margin-left: 79px;
     background-size: 245px 289px;
+    background: url("../img/catalog/gift-background.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/catalog/gift-background-2.png") no-repeat;
+      background-size: 245px 289px;
+    }
   }
 
   .gift__block {
