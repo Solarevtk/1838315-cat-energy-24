@@ -8,12 +8,31 @@
   margin-right: 20px;
 }
 
+.stats-text__block {
+  display: flex;
+}
+
+.stats-text__block::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 53px;
+  background: url("../img/svg/cat__back.svg") no-repeat;
+  background-size: 50px 53px;
+}
+
 .stats__block-text {
   display: flex;
 }
 
-.stats-text__block {
-  display: flex;
+.stats__block-text::after {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 50px;
+  background: url("../img/svg/cat__mass.svg") no-repeat;
+  background-size: 67px 50px;
+  left: 13px;
 }
 
 .stats__svg {
@@ -29,6 +48,8 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  padding-left: 74px;
+  margin-bottom: 29px;
 }
 
 .stats__text {
@@ -68,7 +89,7 @@
     height: 0;
     border-bottom: 1px solid #d9d9d9;
     left: 20px;
-    top: 232px;
+    top: 200px;
   }
 }
 
@@ -98,11 +119,26 @@
     display: flex;
   }
 
-  .stats__catalog {
-    padding-bottom: 57px;
+  .stats-text__block::after {
+    width: 200px;
+    height: 211px;
+    background-size: 200px 211px;
+    left: 446px;
   }
 
-  .sats-text__catalog {
+  .stats__block-text::after {
+    width: 268px;
+    height: 200px;
+    background-size: 268px 200px;
+    left: 412px;
+  }
+
+  .stats__catalog {
+    padding-bottom: 57px;
+    align-items: center;
+  }
+
+  .stats-text__catalog {
     font-size: 20px;
     line-height: 30px;
   }
@@ -112,12 +148,14 @@
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 48px;
+    color: #000000;
   }
 
   .stats__header {
     font-size: 36px;
     line-height: 36px;
     padding-bottom: 24px;
+    padding-left: 0;
   }
 }
 
@@ -135,7 +173,7 @@
 
   .stats__block {
     width: 570px;
-    height: 374px;
+    max-height: 330px;
     margin-right: 80px;
     padding-top: 45px;
   }
@@ -164,10 +202,27 @@
 
   .stats__header {
     padding-top: 22px;
+    padding-left: 162px;
   }
 
   .stats-text__catalog {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .stats-text__block::after {
+    width: 100px;
+    height: 106px;
+    background-size: 100px 106px;
+    left: 52px;
+    top: 30px;
+  }
+
+  .stats__block-text::after {
+    width: 134px;
+    height: 100px;
+    background-size: 134px 100px;
+    left: 33px;
+    top: 30px;
   }
 }
