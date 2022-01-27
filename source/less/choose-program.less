@@ -1,10 +1,15 @@
 .choose-program {
   z-index: 1;
-  margin: 0;
-  margin-bottom: 20px;
   width: 320px;
   height: 480px;
-  background: url("../img/index-background-food.png") no-repeat;
+  background: url("../img/index/index-background-food.png") no-repeat;
+  background-size: 320px 302px;
+  margin: 0 auto;
+
+  @media (min-resolution: 2dppx) and (min-device-pixel-ratio: 2) {
+    background: url("../img/index/index-2-background-food.png") no-repeat;
+    background-size: 320px 302px;
+  }
 }
 
 .choose-program__header {
@@ -38,7 +43,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 7px 66px 7px 66px;
+  padding: 7px 73px 7px 73px;
   background-color: #68b738;
   margin-left: 20px;
 }
@@ -88,6 +93,7 @@
     left: 29px;
     top: 341px;
     z-index: -1;
+    display: flex;
   }
 
   .choose-program__button {
@@ -98,13 +104,17 @@
 
 @media (min-width: @desktop-width) {
   .choose-program {
-    background-image: url("../img/index-background-food.png"), linear-gradient(to right, #ffffff 50%, #64a73c 50%);
+    background-image: url("../img/index/index-background-food_desktop.png"), linear-gradient(to right, #ffffff 50%, #64a73c 50%);
     background-repeat: no-repeat;
     background-size: 720px 694px, auto 694px;
     background-position: top right, top center;
     z-index: -2;
     width: auto;
     min-width: 1440px;
+
+    @media (min-resolution: 2dppx) and (min-device-pixel-ratio: 2) {
+      background-image: url(../img/index/index-2-background-food_desktop.png), linear-gradient(to right, #ffffff 50%, #64a73c 50%);;
+    }
   }
 
   .choose-program__img {

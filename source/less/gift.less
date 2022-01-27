@@ -1,9 +1,15 @@
 .gift {
   width: 280px;
   height: 290px;
-  background: url("../img/gift-background.png") no-repeat;
+  background: url("../img/catalog/gift-background.png") no-repeat;
+  background-size: 280px 290px;
   padding-top: 58px;
   margin-left: 21px;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/catalog/gift-background-2.png") no-repeat;
+    background-size: 280px 290px;
+  }
 }
 
 .gift__text {
@@ -33,6 +39,7 @@
     background-size: cover;
     margin: 0 30px 71px 30px;
     padding: 0;
+    background-size: 707px 200px;
   }
 
   .gift__block {
@@ -59,6 +66,7 @@
     height: 289px;
     margin-top: 79px;
     margin-left: 79px;
+    background-size: 245px 289px;
   }
 
   .gift__block {
